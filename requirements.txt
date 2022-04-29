@@ -1,0 +1,32 @@
+Design and implement a chat server
+
+
+1. Peer-peer communication 
+    store msgs Inmemory until it is read
+    Persistance will come later
+    Https - Rest API
+    No duplicate messages
+    Pull messages from the server
+1.1 Authentication layer -> separate service
+
+2. one-Group communication
+
+
+Rest Endpoints
+
+//Post a msg to a client
+
+curl -X POST http://localhost:1323/send \
+  -H 'Content-Type: application/json' \
+  -d 'FromUser=alice' \
+  -d 'ToUser=bob' \
+  -d 'Message=hiFromalice'
+
+curl -X POST http://localhost:1323/send \
+  -H 'Content-Type: application/json' \
+  -d '{"FromUser":"alice","ToUser":"bob","Message":"hi1Fromalice"}'
+
+
+
+//Get all my unread messages
+
